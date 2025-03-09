@@ -1,0 +1,14 @@
+
+.app-container {
+    /* border: 2px solid black; */
+    height: 100vh;
+    display: flex;
+    .navbar-container {
+        width: 15vw;
+        /* border: 2px solid black; */
+    }
+    .main-section {
+        /* border: 2px solid black; */
+        width: 100vw;
+    }
+}

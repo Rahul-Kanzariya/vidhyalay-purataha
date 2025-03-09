@@ -1,0 +1,22 @@
+.example-button-container {
+    display: flex;
+    justify-content: end;
+
+    button {
+        margin-right: 2%;
+        margin-bottom: 1%;
+    }
+}
+
+tr.mat-mdc-row.mdc-data-table__row.cdk-row {
+    cursor: pointer;
+
+}
+
+tr.mat-mdc-row.mdc-data-table__row.cdk-row:hover {
+    background-color: lightgray;
+}
+
+tr[mat-header-row] {
+    background-color: lightsteelblue;
+}

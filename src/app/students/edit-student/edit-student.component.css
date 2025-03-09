@@ -1,0 +1,21 @@
+
+.edit-student-container {
+    padding-left: 2%;
+    margin-right: 2%;
+
+    mat-form-field {
+        width: 25vw;
+    }
+    .submit-btn {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  

@@ -1,0 +1,36 @@
+<div class="edit-student-container">
+    <p>edit-student works!</p>
+    <div class="student-form-container">
+        <form [formGroup]="studentForm">
+            <div class="row">
+                <!-- <div class="col">
+                    <mat-form-field>
+                        <mat-label>studentId</mat-label>
+                        <input matInput type="number" formControlName="studentId">
+                    </mat-form-field>
+                </div> -->
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>firstname</mat-label>
+                        <input matInput formControlName="firstname">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>lastname</mat-label>
+                        <input matInput formControlName="lastname">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>school</mat-label>
+                        <input matInput formControlName="school">
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="submit-btn">
+        <button mat-flat-button (click)="submitForm()" [disabled]="!studentForm.valid || !studentForm.touched" >Submit</button>
+    </div>
+</div>
