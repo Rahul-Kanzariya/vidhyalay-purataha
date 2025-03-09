@@ -5,6 +5,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import { LoaderComponent } from '../../shared/loader/loader.component';
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
@@ -13,11 +14,15 @@ import {
 
 @Component({
   selector: 'app-students',
-  imports: [MatTableModule,MatButtonModule, MatMenuModule, MatIconModule, RouterLink],
+  imports: [
+    MatTableModule, MatButtonModule, MatMenuModule, MatIconModule,
+    RouterLink, LoaderComponent
+  ],
   templateUrl: './students.component.html',
   styleUrl: './students.component.css',
 })
 export class StudentsComponent {
+  isLoading: boolean = false
   students: any
   displayedColumns = ['firstname', 'lastname', 'school', 'action']
   columns = [
@@ -38,7 +43,9 @@ export class StudentsComponent {
   }
 
   async getStudents(){
+    this.isLoading = true;
     this.students = await this.studentService.getStudentList()
+    this.isLoading = false;
   }
 
   async rowClick(row: any){
@@ -46,15 +53,17 @@ export class StudentsComponent {
   }
 
   async deleteStudent(studentId: any){
+    this.isLoading = true;
     const res:any = await this.studentService.deleteStudent(studentId)
     if(res && res.success){
       this.openSnackBar('Student Deleted Successfully')
     }
     await this.getStudents()
+    this.isLoading = false;
   }
 
   openSnackBar(message: string) {
-    this.snackBar.open(message, 'ok', {
+    this.snackBar.open(message, '', {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
       duration: 2 * 1000,

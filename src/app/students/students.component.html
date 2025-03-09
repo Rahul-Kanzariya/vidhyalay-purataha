@@ -62,6 +62,9 @@
         *matRowDef="let row; columns: displayedColumns;"
         ></tr>
     </table>
+    @if(isLoading== true){
+      <app-loader></app-loader>
+    }
 </div>
   
   

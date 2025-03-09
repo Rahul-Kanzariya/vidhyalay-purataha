@@ -86,7 +86,7 @@ export class EditStudentComponent {
   }
 
   openSnackBar(message: string) {
-    this.snackBar.open(message, 'ok', {
+    this.snackBar.open(message, '', {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
       duration: 2 * 1000,
