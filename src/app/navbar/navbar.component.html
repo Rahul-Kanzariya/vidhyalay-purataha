@@ -1,16 +1,13 @@
 <div class="main-container">
-  <div class="nav-container">
-    <div class="nav-item" routerLink="dashboard">
-       <div>dashboard</div>
-    </div>
-    <div class="nav-item" routerLink="students">
-       <div>students</div>
-    </div>
-    <div class="nav-item" routerLink="payments">
-       <div>payments</div>
-    </div>
-    <div class="nav-item" routerLink="projects">
-       <div>projects</div>
-    </div>
-  </div>
+   <div class="nav-container">
+      @for(menu of menuList; track menu.name){
+         <div
+            [ngClass]="activatedMenu && activatedMenu.name && activatedMenu.name == menu.name ? 'nav-item activated' : 'nav-item'"
+            routerLink="{{menu.endpoint}}"
+            (click)="handleMenuClick(menu)"
+         >
+            <div>{{menu.name}}</div>
+         </div>
+      }
+   </div>
 </div>

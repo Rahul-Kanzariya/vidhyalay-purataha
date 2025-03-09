@@ -1,20 +1,26 @@
 .main-container {
-    background-color: skyblue;
+    background-color: deepskyblue;
     height: 100%;
     /* border: 2px solid black; */
     div.nav-item {
         /* border: 2px solid black; */
         font-weight: 500;
-        background-color: skyblue;
+        background-color: deepskyblue;
         text-align: center;
         align-content: center;
+        cursor: pointer;
         div {
             height: 45px;
-            align-content: center
+            align-content: center;
+            text-align: start;
+            padding-left: 15%;
         }
-        cursor: pointer;
+    
+    }
+    div.nav-item.activated {
+        background-color: lightblue;
     }
     div.nav-item :hover {
-        background-color: deepskyblue;
+        background-color: lightblue;
     }
 }
