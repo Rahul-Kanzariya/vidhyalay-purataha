@@ -1,1 +1,0 @@
-# vidhyalay-purataha
