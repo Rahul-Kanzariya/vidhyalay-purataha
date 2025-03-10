@@ -8,15 +8,22 @@
     }
 }
 
-tr.mat-mdc-row.mdc-data-table__row.cdk-row {
+.demo-table {
+    width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
     cursor: pointer;
-
 }
 
-tr.mat-mdc-row.mdc-data-table__row.cdk-row:hover {
-    background-color: lightgray;
+.mat-mdc-row:hover .mat-mdc-cell {
+    background-color: rgb(221, 221, 221)
 }
 
-tr[mat-header-row] {
-    background-color: lightsteelblue;
+.no-data-table{
+    text-align: center;
+    font-weight: 700;
+    padding: 10px;
 }
