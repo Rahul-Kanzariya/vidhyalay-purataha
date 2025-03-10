@@ -1,3 +1,6 @@
+.students-container {
+    padding: 2%;
+}
 .example-button-container {
     display: flex;
     justify-content: end;
