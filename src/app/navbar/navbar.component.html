@@ -1,4 +1,8 @@
 <div class="main-container">
+   <div class="nav-logo" routerLink="menuList[0].endpoint" (click)="handleMenuClick(menuList[0])" >
+      <img src="logo.jpg" alt="logo">
+      <span>Students</span>
+   </div>
    <div class="nav-container">
       @for(menu of menuList; track menu.name){
          <div
