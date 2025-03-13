@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { StudentsComponent } from './students/students.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { ProjectsComponent } from './projects/projects.component';
 
