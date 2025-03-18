@@ -1,0 +1,16 @@
+.app-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 21rem;
+
+    .login-container {
+        width: 35%;
+        border: 2px solid black;
+    }
+}
+
+mat-card-header {
+    justify-content: center;
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,23 @@
+
+.app-container {
+    /* border: 2px solid black; */
+    height: 100vh;
+    display: flex;
+    .navbar-container {
+        width: 15vw;
+        /* border: 2px solid black; */
+    }
+    .main-section {
+        /* border: 2px solid black; */
+        width: 100vw;
+        .app-header{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 2rem;
+            background-color: lightblue;
+            height: 3rem;
+            text-align: center;
+        }
+    }
+}

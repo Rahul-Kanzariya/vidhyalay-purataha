@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="app-container">
+    <mat-card class="login-container">
+        <mat-card-header class="login-header">
+            <mat-card-title>Sign In</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="login-form">
+            <form [formGroup]="loginForm">
+                <div class="row">
+                    <mat-form-field>
+                        <mat-label>username</mat-label>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field>
+                        <mat-label>password</mat-label>
+                        <input type="password" matInput formControlName="password">
+                    </mat-form-field>
+                </div>
+            </form>
+            <div class="login-footer">
+                <button mat-flat-button (click)="loginSubmit()" >Submit</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
